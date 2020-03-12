@@ -8,8 +8,6 @@ import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import junit.framework.Assert;
-import resource.Xls_Reader;
-
 import static io.restassured.RestAssured.*;
 
 import java.util.Iterator;

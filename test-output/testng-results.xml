@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="8399" started-at="2020-03-12T18:06:52Z" finished-at="2020-03-12T18:07:00Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="8399" started-at="2020-03-12T18:06:52Z" finished-at="2020-03-12T18:07:00Z">
+      <class name="OodlesDB.DBApiTest.TicketTest">
+        <test-method status="PASS" signature="gettoken()[pri:0, instance:OodlesDB.DBApiTest.TicketTest@724af044]" name="gettoken" is-config="true" duration-ms="5669" started-at="2020-03-12T23:36:52Z" finished-at="2020-03-12T23:36:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gettoken -->
+        <test-method status="PASS" signature="raisedTicketbyUser()[pri:0, instance:OodlesDB.DBApiTest.TicketTest@724af044]" name="raisedTicketbyUser" duration-ms="2694" started-at="2020-03-12T23:36:57Z" finished-at="2020-03-12T23:37:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- raisedTicketbyUser -->
+      </class> <!-- OodlesDB.DBApiTest.TicketTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
