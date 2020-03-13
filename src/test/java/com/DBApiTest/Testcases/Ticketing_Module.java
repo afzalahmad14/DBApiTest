@@ -24,15 +24,15 @@ String ticketID;
 @BeforeMethod
 public void gettoken()
 {
- //RestAssured.baseURI="https://ms.oodleslab.com";
-// RestAssured.basePath="/zuul/dashboard_spring/api/v1";
+ RestAssured.baseURI="https://ms.oodleslab.com";
+ RestAssured.basePath="/zuul/dashboard_spring/api/v1";
 Token = 
  given().header("Content-Type", "application/json")
 .body("{\"email\":\"dimpal.bhatia@oodlestechnologies.com\",\"password\":\"Dashboard@DG\"}")
 .when().post(BaseURI+"/api/login")
 .then().statusCode(200).extract().path("access_token");
 }
-//@Test
+@Test
 public void officecodes()
 {
  Response response=
@@ -45,7 +45,7 @@ public void officecodes()
 		System.out.println("officecodesAPI Response time is-->"+response.getTimeIn(TimeUnit.SECONDS));
 }
 
-//@Test
+@Test
 public void concernedteams()
 {   Response response=
 	given().header("Authorization", "Bearer "+ Token).
@@ -58,7 +58,7 @@ Assert.assertEquals("Concerned Team fetched successfully", responsemessage);
 System.out.println("ConcernedTeamsAPI Response time is-->"+response.getTimeIn(TimeUnit.SECONDS));
 }
 
-//@Test
+@Test
 public void categories()
 {   Response response = given().header("Authorization", "Bearer "+ Token).
 	when().get("/categories")
@@ -69,7 +69,7 @@ Assert.assertEquals("Category fetched successfully", responsemessage);
 System.out.println("CategoriesAPI Response time is-->"+response.getTimeIn(TimeUnit.SECONDS));
 }
 
-//@Test
+@Test
 public void image()
 {   Response response=
 	given().header("Authorization", "Bearer "+ Token).
@@ -80,7 +80,7 @@ public void image()
 
 
 
-//@Test
+@Test
 public void raisedTicketbyUser()
 {    Response response=
      given()
@@ -94,7 +94,7 @@ public void raisedTicketbyUser()
 System.out.println("RaisedTicketbyUser Response time is-->"+response.getTimeIn(TimeUnit.SECONDS));
 }
 
-//@Test
+@Test
 public void indirectreportees()
 {
 	 {
@@ -108,7 +108,7 @@ public void indirectreportees()
 	
 }	
 
-//@Test
+@Test
 public void all_Tickets()
 {
 	 {
@@ -123,7 +123,8 @@ public void all_Tickets()
 	}
 	
 }	
-//@Test
+
+@Test
 public void directreportees()
 {
 	 given()
@@ -134,7 +135,7 @@ public void directreportees()
 	.statusCode(200);
 }
 
-//@Test
+@Test
 public void createTicket()
 {
 	String json = "{\r\n" + 
@@ -176,7 +177,7 @@ public void createTicket()
 	Assert.assertEquals("APPROVED", Map.get("Status"));
 }
 
-//@Test
+@Test
 public void singleticktet()
 {
 	 given()
@@ -189,7 +190,7 @@ public void singleticktet()
 	 
 }
 
-@Test
+//@Test
 public void leaveTest()
 {
 	
