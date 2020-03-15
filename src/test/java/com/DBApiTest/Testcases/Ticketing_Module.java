@@ -139,17 +139,7 @@ public void directreportees()
 @Test
 public void createTicket()
 {
-	String json = "{\r\n" + 
-			"			    \"concernedTeamIds\": [\r\n" + 
-			"			        \"1\"\r\n" + 
-			"			    ],\r\n" + 
-			"    \"fileDto\": {},\r\n" + 
-			"    \"priority\": \"HIGH\",\r\n" + 
-			"    \"projectName\": \"Oodles-Dashboard\",\r\n" + 
-			"    \"categoryId\": \"2\",\r\n" + 
-			"    \"subject\": \"Qwerty\",\r\n" + 
-			"    \"description\": \"Qwerty QwertyQwertyQwerty\"\r\n" + 
-			"}";
+	String json = "{\"concernedTeamIds\":[\"1\"],\"fileDto\":{},\"priority\":\"HIGH\",\"projectName\":\"TimeForge\",\"categoryId\":\"4\",\"subject\":\"dsds dvsdvdsvxz\",\"description\":\"vzx xzcxzvzxv\"}";
 	String repsonsejson = given()
 	.header("Authorization", "Bearer "+ Token )
 	.header("Content-Type", "application/json").
@@ -176,7 +166,7 @@ public void createTicket()
 	//Asserts
 	Assert.assertEquals("Ticket created successfully", message);
 	 System.out.println(Map.get("Status"));
-	Assert.assertEquals("APPROVED", Map.get("Status"));
+	Assert.assertEquals("APPROVED", Map.get("status"));
 }
 
 @Test
