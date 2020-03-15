@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 44.667 s <<< FAILURE! - in TestSuite
+com.DBApiTest.Testcases.Ticketing_Module.createTicket  Time elapsed: 1.734 s  <<< FAILURE!
+java.lang.AssertionError: expected [null] but found [APPROVED]
+	at com.DBApiTest.Testcases.Ticketing_Module.createTicket(Ticketing_Module.java:179)
+
