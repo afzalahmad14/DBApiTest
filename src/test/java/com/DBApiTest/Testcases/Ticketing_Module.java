@@ -1,5 +1,6 @@
 package com.DBApiTest.Testcases;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -7,7 +8,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import junit.framework.Assert;
+
 import static io.restassured.RestAssured.*;
 
 import java.util.Iterator;
@@ -18,13 +19,13 @@ import java.util.concurrent.TimeUnit;
 public class Ticketing_Module {
 	
 String Token;
-String BaseURI="https://ms.oodleslab.com";
+String BaseURI="https://stage.oodleslab.com";
 String ticketID;
 	
 @BeforeMethod
 public void gettoken()
 {
- RestAssured.baseURI="https://ms.oodleslab.com";
+ RestAssured.baseURI="https://stage.oodleslab.com";
  RestAssured.basePath="/zuul/dashboard_spring/api/v1";
 Token = 
  given().header("Content-Type", "application/json")
@@ -174,6 +175,7 @@ public void createTicket()
 	//System.out.println(message);
 	//Asserts
 	Assert.assertEquals("Ticket created successfully", message);
+	 System.out.println(Map.get("Status"));
 	Assert.assertEquals("APPROVED", Map.get("Status"));
 }
 

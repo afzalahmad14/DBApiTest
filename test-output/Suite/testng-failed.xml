@@ -7,7 +7,6 @@
         <methods>
           <include name="createTicket"/>
           <include name="gettoken"/>
-          <include name="all_Tickets"/>
         </methods>
       </class> <!-- com.DBApiTest.Testcases.Ticketing_Module -->
     </classes>

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods, 2 failed,   8 passed</span>
+                    <span class="method-stats">10 methods, 1 failed,   9 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -100,11 +100,6 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
                     <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.DBApiTest.Testcases.Ticketing_Module" hash-for-method="all_Tickets">all_Tickets</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.DBApiTest.Testcases.Ticketing_Module" hash-for-method="createTicket">createTicket</a> <!-- method navigator-link -->
@@ -119,6 +114,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.DBApiTest.Testcases.Ticketing_Module" hash-for-method="all_Tickets">all_Tickets</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.DBApiTest.Testcases.Ticketing_Module" hash-for-method="categories">categories</a> <!-- method navigator-link -->
@@ -179,48 +179,12 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="all_Tickets">
-                  </a> <!-- all_Tickets -->
-                  <span class="method-name">all_Tickets</span>
-                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;200&gt; but was &lt;504&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
-	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
-	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
-	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
-	at com.DBApiTest.Testcases.Ticketing_Module.all_Tickets(Ticketing_Module.java:120)
-... Removed 40 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="createTicket">
                   </a> <!-- createTicket -->
                   <span class="method-name">createTicket</span>
-                  <div class="stack-trace">junit.framework.ComparisonFailure: expected:&lt;APPROVED&gt; but was:&lt;null&gt;
-	at junit.framework.Assert.assertEquals(Assert.java:81)
-	at junit.framework.Assert.assertEquals(Assert.java:87)
-	at com.DBApiTest.Testcases.Ticketing_Module.createTicket(Ticketing_Module.java:177)
-... Removed 25 stack frames
+                  <div class="stack-trace">java.lang.AssertionError: expected [null] but found [APPROVED]
+	at com.DBApiTest.Testcases.Ticketing_Module.createTicket(Ticketing_Module.java:179)
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -232,6 +196,13 @@ Expected status code &lt;200&gt; but was &lt;504&gt;.
               <span class="class-name">com.DBApiTest.Testcases.Ticketing_Module</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="all_Tickets">
+                  </a> <!-- all_Tickets -->
+                  <span class="method-name">all_Tickets</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="categories">
@@ -346,48 +317,48 @@ data.addRows(10);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'all_Tickets')
 data.setCell(0, 2, 'com.DBApiTest.Testcases.Ticketing_Module')
-data.setCell(0, 3, 61757);
+data.setCell(0, 3, 9943);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createTicket')
+data.setCell(1, 1, 'directreportees')
 data.setCell(1, 2, 'com.DBApiTest.Testcases.Ticketing_Module')
-data.setCell(1, 3, 2271);
+data.setCell(1, 3, 1747);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'categories')
+data.setCell(2, 1, 'createTicket')
 data.setCell(2, 2, 'com.DBApiTest.Testcases.Ticketing_Module')
-data.setCell(2, 3, 2139);
+data.setCell(2, 3, 1648);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'raisedTicketbyUser')
+data.setCell(3, 1, 'concernedteams')
 data.setCell(3, 2, 'com.DBApiTest.Testcases.Ticketing_Module')
-data.setCell(3, 3, 1789);
+data.setCell(3, 3, 1571);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'officecodes')
+data.setCell(4, 1, 'categories')
 data.setCell(4, 2, 'com.DBApiTest.Testcases.Ticketing_Module')
-data.setCell(4, 3, 1702);
+data.setCell(4, 3, 1543);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'concernedteams')
+data.setCell(5, 1, 'image')
 data.setCell(5, 2, 'com.DBApiTest.Testcases.Ticketing_Module')
-data.setCell(5, 3, 1693);
+data.setCell(5, 3, 1509);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'image')
+data.setCell(6, 1, 'indirectreportees')
 data.setCell(6, 2, 'com.DBApiTest.Testcases.Ticketing_Module')
-data.setCell(6, 3, 1658);
+data.setCell(6, 3, 1470);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'directreportees')
+data.setCell(7, 1, 'raisedTicketbyUser')
 data.setCell(7, 2, 'com.DBApiTest.Testcases.Ticketing_Module')
-data.setCell(7, 3, 1655);
+data.setCell(7, 3, 1455);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'indirectreportees')
+data.setCell(8, 1, 'singleticktet')
 data.setCell(8, 2, 'com.DBApiTest.Testcases.Ticketing_Module')
-data.setCell(8, 3, 1203);
+data.setCell(8, 3, 1450);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'singleticktet')
+data.setCell(9, 1, 'officecodes')
 data.setCell(9, 2, 'com.DBApiTest.Testcases.Ticketing_Module')
-data.setCell(9, 3, 1087);
+data.setCell(9, 3, 1414);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 23 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -419,84 +390,82 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">all_Tickets</span>
-                <span class="method-start">5467 ms</span>
+                <span class="method-start">4805 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">gettoken</span>
-                <span class="method-start">67233 ms</span>
+                <span class="method-start">14751 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">categories</span>
-                <span class="method-start">68938 ms</span>
+                <span class="method-start">16374 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">gettoken</span>
-                <span class="method-start">71080 ms</span>
+                <span class="method-start">17925 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">concernedteams</span>
-                <span class="method-start">72741 ms</span>
+                <span class="method-start">19493 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">gettoken</span>
-                <span class="method-start">74436 ms</span>
+                <span class="method-start">21067 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">createTicket</span>
-                <span class="method-start">76128 ms</span>
+                <span class="method-start">22511 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">gettoken</span>
-                <span class="method-start">78403 ms</span>
+                <span class="method-start">24167 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">directreportees</span>
-                <span class="method-start">80049 ms</span>
+                <span class="method-start">25700 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">gettoken</span>
-                <span class="method-start">81706 ms</span>
+                <span class="method-start">27456 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">image</span>
-                <span class="method-start">83349 ms</span>
+                <span class="method-start">29065 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">gettoken</span>
-                <span class="method-start">85011 ms</span>
+                <span class="method-start">30577 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">indirectreportees</span>
-                <span class="method-start">86699 ms</span>
+                <span class="method-start">32095 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">gettoken</span>
-                <span class="method-start">87904 ms</span>
+                <span class="method-start">33567 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">officecodes</span>
-                <span class="method-start">88990 ms</span>
+                <span class="method-start">34971 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">gettoken</span>
-                <span class="method-start">90695 ms</span>
+                <span class="method-start">36387 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">raisedTicketbyUser</span>
-                <span class="method-start">92327 ms</span>
+                <span class="method-start">38573 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">gettoken</span>
-                <span class="method-start">94119 ms</span>
+                <span class="method-start">40035 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">singleticktet</span>
-                <span class="method-start">95808 ms</span>
+                <span class="method-start">41550 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
