@@ -8,103 +8,105 @@
   <packaging>jar</packaging>
 
   <name>DBApiTest</name>
-  <url>http://maven.apache.org</url>
+     <url>http://maven.apache.org</url>
+  
+  
   <build>
-  <resources>
-  <resource>
-        <directory>log4j</directory>
-        <filtering>true</filtering>
-      </resource>
-      </resources>
-    <pluginManagement>
+     <resources>
+         <resource>
+           <directory>log4j</directory>
+           <filtering>true</filtering>
+         </resource>
+     </resources>
    
    
+   <pluginManagement>
+   
+     <plugins>
       
-      <plugins>
-      
-      <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.5.1</version>
-            <configuration>
-            <executable>C:\Program Files\Java\jdk1.8.0_221\bin\javac.exe</executable>
-                <source>1.8</source>
-                <target>1.8</target>
-            </configuration>
-        </plugin>
+            <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-compiler-plugin</artifactId>
+                  <version>3.5.1</version>
+                     <configuration>
+                       <executable>C:\Program Files\Java\jdk1.8.0_221\bin\javac.exe</executable>
+                       <source>1.8</source>
+                       <target>1.8</target>
+                    </configuration>
+            </plugin>
         
         
    
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M4</version>
-        <configuration>
-          <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
-          </suiteXmlFiles>
-        </configuration>
-      </plugin>
+            <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-surefire-plugin</artifactId>
+                 <version>3.0.0-M4</version>
+                    <configuration>
+                    <suiteXmlFiles>
+                         <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                   </configuration>
+             </plugin>
     
 
-        </plugins>
+             </plugins>
   
     </pluginManagement>
   </build>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+     <properties>
+           <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     </properties>
  
   
   <dependencies> 
-   <dependency>
-      <groupId>io.rest-assured</groupId>
-      <artifactId>rest-assured</artifactId>
-      <version>4.2.0</version>
-      <scope>test</scope>
-</dependency>
+   
+   
+          <dependency>
+             <groupId>io.rest-assured</groupId>
+             <artifactId>rest-assured</artifactId>
+             <version>4.2.0</version>
+             <scope>test</scope>
+          </dependency>
 
-<dependency>
-      <groupId>io.rest-assured</groupId>
-      <artifactId>json-path</artifactId>
-      <version>4.2.0</version>
-      <scope>test</scope>
-</dependency>
+          <dependency>
+              <groupId>io.rest-assured</groupId>
+              <artifactId>json-path</artifactId>
+              <version>4.2.0</version>
+              <scope>test</scope>
+           </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.hamcrest/java-hamcrest -->
-<dependency>
-    <groupId>org.hamcrest</groupId>
-    <artifactId>java-hamcrest</artifactId>
-    <version>2.0.0.0</version>
-    <scope>test</scope>
-
-</dependency>
- <dependency>
-  <groupId>org.testng</groupId>
-  <artifactId>testng</artifactId>
-  <version>7.1.0</version>
-   <scope>test</scope>
-</dependency>
+           <dependency>
+               <groupId>org.hamcrest</groupId>
+               <artifactId>java-hamcrest</artifactId>
+               <version>2.0.0.0</version>
+               <scope>test</scope>
+            </dependency>
+ 
+            <dependency>
+               <groupId>org.testng</groupId>
+               <artifactId>testng</artifactId>
+               <version>7.1.0</version>
+               <scope>test</scope>
+             </dependency>
   
 <!--Apache POI-->
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-ooxml</artifactId>
-    <version>4.1.1</version>
-</dependency>
-
-
+             <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>4.1.1</version>
+              </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi</artifactId>
-    <version>4.1.1</version>
-</dependency>
+              <dependency>
+                  <groupId>org.apache.poi</groupId>
+                  <artifactId>poi</artifactId>
+                  <version>4.1.1</version>
+              </dependency>
   
     
-  </dependencies>
-</project>
+    </dependencies>
+    </project>
 
  
